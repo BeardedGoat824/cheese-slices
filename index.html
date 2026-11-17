@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cheese Slices - | Official Landmark Page — Cheaha Dr, Oxford, AL</title>
+  <meta
+    name="description"
+    content="Official visitor guide, interactive stop sign simulator, and historical archive for Cheese Slices - (Cheaha Dr, Oxford, AL 36203). Rated 4.1 stars on Google Maps."
+  />
+  <meta property="og:title" content="Cheese Slices - | Cheaha Dr, Oxford, AL 36203" />
+  <meta
+    property="og:description"
+    content="Stop. Look. Cheese. Visit Oxford, Alabama's 4.1-star Tourist Attraction on Cheaha Dr."
+  />
+  <meta property="og:type" content="website" />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolygon points='19,4 45,4 60,19 60,45 45,60 19,60 4,45 4,19' fill='%23C8232C' stroke='%23FFFFFF' stroke-width='3'/%3E%3Crect x='22' y='21' width='22' height='22' rx='2' transform='rotate(-7 33 32)' fill='%23F7BE2D' stroke='%23E09612' stroke-width='2'/%3E%3C/svg%3E"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Municipal Telemetry Bar -->
+  <header class="dispatch-bar">
+    <div class="container dispatch-inner">
+      <div class="dispatch-left">
+        <span class="status-dot" id="headerStatusDot" aria-hidden="true"></span>
+        <span class="mono-label">LANDMARK STATUS:</span>
+        <span class="status-text" id="headerStatusText">1 SURVIVOR + REMNANTS</span>
+      </div>
+      <div class="dispatch-right">
+        <span class="mono-coord">33.5858° N, 85.8208° W</span>
+        <span class="divider" aria-hidden="true">|</span>
+        <span class="mono-coord">PLUS CODE: H5PH+8M</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Primary Navigation">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-octagon" aria-hidden="true">STOP</span>
+        <span class="brand-title">
+          <strong>CHEESE SLICES -</strong>
+          <small>CHEAHA DR • OXFORD, AL</small>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#simulator">Interactive Sign</a>
+        <a href="#chronicle">The Three Eras</a>
+        <a href="#reviews">Reviews (4.1★)</a>
+        <a href="#visit">Plan Your Stop</a>
+        <a
+          href="https://maps.app.goo.gl/mee9EaQtmHFc8xZc7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-sm btn-primary"
+        >
+          Google Maps ↗
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- Hero Section with Interactive Stop Sign -->
+    <section class="hero" id="simulator">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="badge badge-cheese">TOURIST ATTRACTION</span>
+            <span class="badge badge-outline">CALHOUN COUNTY, ALABAMA</span>
+          </div>
+          <h1>
+            Stop. Look.<br />
+            <span class="highlight-cheese">Cheese.</span>
+          </h1>
+          <p class="lead">
+            Welcome to the official digital home of <strong>Cheese Slices -</strong>, an
+            open-air, dairy-on-aluminum roadside installation located at the four-way
+            intersection on <strong>Cheaha Dr, Oxford, AL 36203</strong>.
+          </p>
+          <p class="sub-lead">
+            Sometimes adorned with a dozen golden slices at midnight. Sometimes a solitary
+            survivor clinging next to a scorched memory. Occasionally, heartbreakingly,
+            just a stop sign.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary" id="btnSlapRandom">
+              🧀 Slap a Slice on the Sign
+            </button>
+            <a
+              href="https://maps.app.goo.gl/mee9EaQtmHFc8xZc7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              Get Directions on Maps
+            </a>
+          </div>
+
+          <div class="rating-pill-row">
+            <div class="rating-pill">
+              <span class="stars" aria-label="4.1 out of 5 stars">★★★★☆</span>
+              <strong>4.1</strong>
+              <span>(9 Google Reviews)</span>
+            </div>
+            <div class="rating-pill">
+              <span>♿ Wheelchair Accessible Lot</span>
+            </div>
+            <div class="rating-pill">
+              <span>🏳️‍🌈 LGBTQ+ Friendly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Stop Sign Stage -->
+        <div class="sign-stage-card" id="signStageCard">
+          <div class="stage-toolbar">
+            <div class="stage-readout">
+              <span class="mono-label">ACTIVE SLICES:</span>
+              <strong id="sliceCount" class="mono-value">2</strong>
+              <span class="stage-hint">(Click anywhere on the red sign to slap!)</span>
+            </div>
+            <div class="stage-toggles">
+              <button
+                type="button"
+                class="tool-btn"
+                id="btnToggleNight"
+                aria-pressed="false"
+                title="Toggle Night Headlights Mode"
+              >
+                🌙 Night Mode
+              </button>
+              <button
+                type="button"
+                class="tool-btn"
+                id="btnToggleSound"
+                aria-pressed="true"
+                title="Toggle Cheese Slap Sound"
+              >
+                🔊 Sound: On
+              </button>
+            </div>
+          </div>
+
+          <div class="sign-viewport" id="signViewport" data-theme="day">
+            <!-- Scenic background elements -->
+            <div class="scene-sky" aria-hidden="true"></div>
+            <div class="scene-stars" aria-hidden="true"></div>
+            <div class="scene-horizon" aria-hidden="true">
+              <div class="house-silhouette house-left"></div>
+              <div class="tree-silhouette"></div>
+              <div class="hydrant" title="Blue-cap Oxford Fire Hydrant"></div>
+              <div class="road-strip"></div>
+            </div>
+            <div class="headlight-cone" aria-hidden="true"></div>
+
+            <!-- The Sign Assembly -->
+            <div class="sign-assembly">
+              <!-- Street blade -->
+              <div class="street-blade" aria-label="Cheaha Drive Street Sign">
+                <span>CHEAHA</span>
+                <small>DR</small>
+              </div>
+
+              <!-- Interactive Stop Sign -->
+              <div
+                class="stop-sign-wrap"
+                id="stopSignTarget"
+                role="application"
+                aria-label="Interactive Stop Sign. Click or tap anywhere on the octagon to slap a slice of American cheese onto the sign."
+                tabindex="0"
+              >
+                <svg
+                  class="stop-sign-svg"
+                  viewBox="0 0 320 320"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- White outer border -->
+                  <polygon
+                    points="96,10 224,10 310,96 310,224 224,310 96,310 10,224 10,96"
+                    fill="#F4F5F6"
+                    stroke="#B8BDC2"
+                    stroke-width="2"
+                  />
+                  <!-- Inner red reflective face -->
+                  <polygon
+                    points="100,20 220,20 300,100 300,220 220,300 100,300 20,220 20,100"
+                    fill="#C8232C"
+                  />
+                  <!-- Subtle sign rivets -->
+                  <circle cx="160" cy="36" r="4" fill="#D9DEE2" stroke="#7E868C" stroke-width="1" />
+                  <circle cx="160" cy="284" r="4" fill="#D9DEE2" stroke="#7E868C" stroke-width="1" />
+                  <!-- STOP lettering -->
+                  <text
+                    x="160"
+                    y="194"
+                    text-anchor="middle"
+                    font-family="'Barlow Condensed', 'Impact', sans-serif"
+                    font-weight="800"
+                    font-size="112"
+                    letter-spacing="4"
+                    fill="#FFFFFF"
+                  >
+                    STOP
+                  </text>
+                </svg>
+
+                <!-- Dynamic cheese slices layer -->
+                <div class="cheese-layer" id="cheeseLayer"></div>
+              </div>
+
+              <!-- 4-WAY plaque -->
+              <div class="four-way-plaque">4-WAY</div>
+
+              <!-- Green U-channel post -->
+              <div class="sign-post" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Preset Era Controls -->
+          <div class="preset-bar">
+            <span class="mono-label">LOAD ERA:</span>
+            <div class="preset-buttons">
+              <button type="button" class="preset-btn" data-preset="era1">
+                Era I: Midnight Dozen (12)
+              </button>
+              <button type="button" class="preset-btn active" data-preset="era2">
+                Era II: Lone Survivor
+              </button>
+              <button type="button" class="preset-btn" data-preset="era3">
+                Era III: No Cheese (0)
+              </button>
+              <button type="button" class="preset-btn" id="btnWeather">
+                ☀️ Sun-Bake / Age
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Telemetry / Visitor Facts Strip -->
+    <section class="facts-strip" aria-label="Landmark Facts">
+      <div class="container facts-grid">
+        <div class="fact-item">
+          <span class="fact-kicker">ADMISSION FEE</span>
+          <strong class="fact-val">$0.00</strong>
+          <span class="fact-note">Advance tickets: Not recommended</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-kicker">REPORTED WAIT TIME</span>
+          <strong class="fact-val">0 min – 1 hr+</strong>
+          <span class="fact-note">Wait time spikes during cheese droughts</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-kicker">CHEESE VARIETY</span>
+          <strong class="fact-val">American Singles</strong>
+          <span class="fact-note">Warning: Zero cheddar reported</span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-kicker">OPERATING HOURS</span>
+          <strong class="fact-val">24 / 7 / 365</strong>
+          <span class="fact-note">Best viewed under high beams or golden hour</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Three Eras / Curatorial Chronicle -->
+    <section class="section" id="chronicle">
+      <div class="container">
+        <div class="section-header">
+          <span class="mono-label">CURATORIAL ARCHIVE</span>
+          <h2>The Three Documented Eras of Cheaha Dr</h2>
+          <p>
+            Reconstructed from eyewitness photography and field dispatches submitted to the
+            Google Maps public record.
+          </p>
+        </div>
+
+        <div class="era-grid">
+          <article class="era-card">
+            <div class="era-badge">ERA I • NIGHTTIME</div>
+            <h3>The Nocturnal Abundance</h3>
+            <p class="era-caption">"Stop sign with cheese slices"</p>
+            <p>
+              Captured from behind a windshield under crisp night headlights, at least
+              a dozen square slices of yellow processed cheese blanketed the entire
+              octagonal canvas—covering the S, crowning the T, and framing the O and P.
+              Peak dairy saturation.
+            </p>
+            <button type="button" class="text-link preset-trigger" data-preset="era1">
+              Preview Era I on the Sign →
+            </button>
+          </article>
+
+          <article class="era-card era-card-featured">
+            <div class="era-badge">ERA II • LATE AFTERNOON</div>
+            <h3>The Lone Survivor &amp; The Remnant</h3>
+            <p class="era-caption">
+              "1 Slice of cheese stuck to the stop sign and the remnants of 2"
+            </p>
+            <p>
+              As the Alabama sun took its toll, one stoic golden slice held the line
+              between the <strong>T</strong> and the <strong>O</strong>. Just inches to its
+              left, the darkened, weathered silhouette of a fallen comrade remained fused to
+              the vertical bar of the <strong>T</strong>.
+            </p>
+            <button type="button" class="text-link preset-trigger" data-preset="era2">
+              Preview Era II on the Sign →
+            </button>
+          </article>
+
+          <article class="era-card">
+            <div class="era-badge">ERA III • CONTROVERSY</div>
+            <h3>The Great Cheddar Drought</h3>
+            <p class="era-caption">"No cheese. Just stop sign"</p>
+            <p>
+              As word spread across Calhoun County, pilgrims arrived only to confront an
+              unadorned, standard-issue MUTCD R1-1 stop sign. The resulting 1-star reviews
+              sparked a fierce philosophical debate: is the cheese the art, or is the
+              expectation of cheese the art?
+            </p>
+            <button type="button" class="text-link preset-trigger" data-preset="era3">
+              Preview Era III on the Sign →
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pilgrim Reviews & Field Reports -->
+    <section class="section section-tinted" id="reviews">
+      <div class="container">
+        <div class="section-header reviews-header">
+          <div>
+            <span class="mono-label">CRITICAL ACCLAIM &amp; CONTROVERSY</span>
+            <h2>Verified Google Maps Reviews</h2>
+            <p>
+              Holding a steady <strong>4.1 ★</strong> average across 9 reviews—split
+              dramatically between art connoisseurs and disappointed dairy seekers.
+            </p>
+          </div>
+          <div class="score-box" aria-label="Overall rating 4.1 out of 5">
+            <div class="score-big">4.1</div>
+            <div class="score-meta">
+              <div class="stars">★★★★☆</div>
+              <small>9 public reviews</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid">
+          <article class="review-card">
+            <div class="review-top">
+              <div>
+                <strong>Htiek Mahned</strong>
+                <span class="review-badge">Local Guide • 16 reviews</span>
+              </div>
+              <span class="review-stars" aria-label="5 stars">★★★★★</span>
+            </div>
+            <blockquote>“Such an inspirational art installation.”</blockquote>
+            <div class="review-foot">Visited on a Weekday • Google Maps</div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div>
+                <strong>Tony Jenkins</strong>
+                <span class="review-badge">Local Guide • 18 reviews</span>
+              </div>
+              <span class="review-stars" aria-label="5 stars">★★★★★</span>
+            </div>
+            <blockquote>“Well worth the stop.”</blockquote>
+            <div class="review-foot">Visited on a Weekend • Wait time: No wait</div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div>
+                <strong>Falcon Art</strong>
+                <span class="review-badge">Local Guide • 94 reviews</span>
+              </div>
+              <span class="review-stars" aria-label="5 stars">★★★★★</span>
+            </div>
+            <blockquote>
+              “How the heck did you get this approved as an attraction on Google Maps? 😆”
+            </blockquote>
+            <div class="review-foot">Google Maps Public Review</div>
+          </article>
+
+          <article class="review-card review-card-drought">
+            <div class="review-top">
+              <div>
+                <strong>Zachary Penwell</strong>
+                <span class="review-badge">2 reviews</span>
+              </div>
+              <span class="review-stars stars-low" aria-label="1 star">★☆☆☆☆</span>
+            </div>
+            <blockquote>
+              “Went there recently to see the cheese. No cheese. Just stop sign”
+            </blockquote>
+            <div class="review-foot">Wait time reported: 1 hr+ • Tickets in advance: No</div>
+          </article>
+
+          <article class="review-card review-card-drought">
+            <div class="review-top">
+              <div>
+                <strong>Becky Pogue</strong>
+                <span class="review-badge">Local Guide • 42 reviews</span>
+              </div>
+              <span class="review-stars stars-low" aria-label="1 star">★☆☆☆☆</span>
+            </div>
+            <blockquote>“There is no cheddar!!”</blockquote>
+            <div class="review-foot">Google Maps Public Review</div>
+          </article>
+        </div>
+
+        <!-- Local Field Report / Guestbook Form -->
+        <div class="field-report-box">
+          <div class="field-report-intro">
+            <h3>Submit a Field Sighting (Local Preview)</h3>
+            <p>
+              Did you just drive past Cheaha Dr? Log your sighting below to update this
+              browser’s live Cheese Status &amp; Guestbook—or submit an official review
+              directly on Google Maps.
+            </p>
+          </div>
+          <form class="field-form" id="fieldReportForm">
+            <div class="form-row">
+              <label>
+                <span>Your Name / Alias</span>
+                <input type="text" id="reportName" placeholder="e.g. Calhoun Pilgrim" maxlength="40" required />
+              </label>
+              <label>
+                <span>Cheese Sighted?</span>
+                <select id="reportStatus">
+                  <option value="SURVIVING SLICES SPOTTED">Yes — Slices on Sign</option>
+                  <option value="PEAK DAIRY SATURATION (10+)">Yes — Full Night Coverage</option>
+                  <option value="NO CHEESE. JUST STOP SIGN.">No — Just Stop Sign</option>
+                  <option value="STILL NO CHEDDAR">No Cheddar Detected</option>
+                </select>
+              </label>
+              <label>
+                <span>Rating</span>
+                <select id="reportStars">
+                  <option value="5">5 ★ — Inspirational</option>
+                  <option value="4">4 ★ — Solid Stop</option>
+                  <option value="3">3 ★ — Remnants Only</option>
+                  <option value="1">1 ★ — No Cheese / No Cheddar</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-row form-row-bottom">
+              <label class="grow">
+                <span>Field Notes</span>
+                <input
+                  type="text"
+                  id="reportNote"
+                  placeholder="Describe the dairy adhesion conditions..."
+                  maxlength="140"
+                  required
+                />
+              </label>
+              <button type="submit" class="btn btn-primary">Log Sighting</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location, Map & Rules of Engagement -->
+    <section class="section" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-info">
+          <span class="mono-label">PLAN YOUR PILGRIMAGE</span>
+          <h2>Finding Cheese Slices -</h2>
+          <p>
+            Located in a quiet residential neighborhood in Oxford, Alabama, just north of
+            Cheaha Mountain’s foothills. Please drive respectfully and always come to a
+            complete stop at the 4-way intersection.
+          </p>
+
+          <dl class="location-details">
+            <div>
+              <dt>Official Pin Name</dt>
+              <dd>Cheese Slices -</dd>
+            </div>
+            <div>
+              <dt>Address</dt>
+              <dd>Cheaha Dr, Oxford, AL 36203</dd>
+            </div>
+            <div>
+              <dt>GPS Coordinates</dt>
+              <dd class="coord-copy-row">
+                <code>33.585785, -85.820824</code>
+                <button type="button" class="copy-btn" id="btnCopyCoords">Copy</button>
+              </dd>
+            </div>
+            <div>
+              <dt>Google Plus Code</dt>
+              <dd><code>865PH5PH+8M</code> (<code>H5PH+8M Oxford, Alabama</code>)</dd>
+            </div>
+          </dl>
+
+          <div class="etiquette-card">
+            <h3>Pilgrim Etiquette</h3>
+            <ul>
+              <li><strong>Stop completely:</strong> It is an active 4-way residential intersection.</li>
+              <li><strong>Keep it readable:</strong> Never obscure the letters <code>S-T-O-P</code>.</li>
+              <li><strong>Manage expectations:</strong> Cheddar is historically unavailable.</li>
+              <li><strong>Leave no wrapper:</strong> Dispose of plastic sleeves responsibly.</li>
+            </ul>
+          </div>
+
+          <div class="visit-actions">
+            <a
+              href="https://maps.app.goo.gl/mee9EaQtmHFc8xZc7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              Open Official Google Maps Pin ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="map-frame-card">
+          <div class="map-header">
+            <span class="mono-label">SATELLITE / STREET INTERSECTION</span>
+            <span class="mono-coord">OXFORD, AL 36203</span>
+          </div>
+          <iframe
+            title="Map of Cheese Slices - on Cheaha Dr, Oxford, AL 36203"
+            src="https://maps.google.com/maps?q=33.585785,-85.820824+(Cheese%20Slices%20-)&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>CHEESE SLICES - PRESERVATION SOCIETY (UNOFFICIAL)</strong>
+        <p>
+          Cheaha Dr, Oxford, AL 36203 • Calhoun County • Not affiliated with the City of
+          Oxford, ALDOT, or any dairy conglomerate.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to Top ↑</a>
+        <a
+          href="https://maps.app.goo.gl/mee9EaQtmHFc8xZc7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Maps Listing
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
