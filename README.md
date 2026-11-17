@@ -3,7 +3,7 @@
 An interactive landmark website dedicated to **Cheese Slices -**, the 4.1★ Google Maps Tourist Attraction at the four-way stop sign on Cheaha Dr in Oxford, Alabama (`33.585785, -85.820824`).
 
 - **Google Maps Pin:** https://maps.app.goo.gl/mee9EaQtmHFc8xZc7
-- **Live Site (GitHub Pages):** https://beardedgoat824.github.io/cheese-slices/
+- **Live Site:** https://cheeseslices.lol/ (hosted via GitHub Pages)
 
 ## Features
 
