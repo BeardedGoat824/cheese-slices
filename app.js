@@ -324,7 +324,7 @@
     fieldReportForm.reset();
   });
 
-  // Boot with Era II ("1 Slice of cheese stuck to the stop sign and the remnants of 2")
-  loadPreset("era2");
+  // Boot with Era I ("Midnight Dozen" under headlights to match the dark midnight theme)
+  loadPreset("era1");
   loadStoredSightings();
 })();

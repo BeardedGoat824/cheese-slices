@@ -1,19 +1,23 @@
 :root {
-  --bg: #faf6ee;
-  --surface: #ffffff;
-  --surface-tint: #f2ead9;
-  --ink: #19191b;
-  --ink-muted: #56565c;
-  --border: #ddd3bf;
-  --stop-red: #c8232c;
-  --stop-red-dark: #991820;
+  color-scheme: dark;
+  --bg: #0c0d11;
+  --surface: #151820;
+  --surface-2: #1c202b;
+  --surface-tint: #101218;
+  --ink: #f3efe6;
+  --ink-muted: #a1a6b4;
+  --border: #282d3a;
+  --border-strong: #3d4457;
+  --stop-red: #d92630;
+  --stop-red-dark: #b31c24;
+  --stop-red-bright: #ff5b64;
   --cheese: #f7be2d;
-  --cheese-deep: #e29612;
-  --cheese-pale: #fff0bd;
+  --cheese-deep: #d49014;
+  --cheese-tint: rgba(247, 190, 45, 0.1);
   --sign-green: #22543d;
-  --asphalt: #24262b;
-  --shadow-sm: 0 2px 8px rgba(25, 25, 27, 0.06);
-  --shadow-md: 0 12px 30px rgba(25, 25, 27, 0.1);
+  --asphalt: #07080b;
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.5);
   --radius: 14px;
 }
 
@@ -117,8 +121,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(250, 246, 238, 0.92);
-  backdrop-filter: blur(10px);
+  background: rgba(12, 13, 17, 0.88);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -186,7 +190,7 @@ body {
 }
 
 .nav-links a:not(.btn):hover {
-  color: var(--stop-red);
+  color: var(--cheese);
 }
 
 /* Buttons */
@@ -226,13 +230,13 @@ body {
 }
 
 .btn-secondary {
-  background: var(--surface);
+  background: var(--surface-2);
   color: var(--ink);
-  border-color: var(--border);
+  border-color: var(--border-strong);
 }
 
 .btn-secondary:hover {
-  border-color: var(--ink);
+  border-color: var(--cheese);
 }
 
 /* Hero */
@@ -265,11 +269,11 @@ body {
 
 .badge-cheese {
   background: var(--cheese);
-  color: var(--ink);
+  color: #141416;
 }
 
 .badge-outline {
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   background: var(--surface);
   color: var(--ink-muted);
 }
@@ -286,6 +290,7 @@ h1 {
 .highlight-cheese {
   display: inline-block;
   background: var(--cheese);
+  color: #141416;
   padding: 0 12px 2px;
   border-radius: 6px;
   box-shadow: 4px 4px 0 var(--stop-red);
@@ -340,10 +345,10 @@ h1 {
 /* Interactive Stop Sign Stage */
 .sign-stage-card {
   background: var(--surface);
-  border: 2px solid var(--ink);
+  border: 2px solid var(--border-strong);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 8px 8px 0 var(--ink);
+  box-shadow: 8px 8px 0 var(--cheese);
 }
 
 .stage-toolbar {
@@ -352,7 +357,7 @@ h1 {
   justify-content: space-between;
   gap: 10px;
   padding: 12px 16px;
-  background: #f6f1e6;
+  background: var(--surface-2);
   border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
 }
@@ -366,7 +371,7 @@ h1 {
 
 .mono-value {
   font-size: 1.05rem;
-  color: var(--stop-red);
+  color: var(--cheese);
 }
 
 .stage-hint {
@@ -385,16 +390,16 @@ h1 {
   font-weight: 700;
   padding: 6px 10px;
   border-radius: 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   background: var(--surface);
   color: var(--ink);
   cursor: pointer;
 }
 
 .tool-btn[aria-pressed="true"] {
-  background: var(--asphalt);
-  color: var(--cheese);
-  border-color: var(--asphalt);
+  background: var(--cheese);
+  color: #141416;
+  border-color: var(--cheese);
 }
 
 .sign-viewport {
@@ -684,7 +689,7 @@ h1 {
   justify-content: space-between;
   gap: 10px;
   padding: 12px 16px;
-  background: #f6f1e6;
+  background: var(--surface-2);
   border-top: 1px solid var(--border);
   flex-wrap: wrap;
 }
@@ -701,7 +706,7 @@ h1 {
   font-weight: 700;
   padding: 6px 10px;
   border-radius: 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   background: var(--surface);
   color: var(--ink);
   cursor: pointer;
@@ -709,17 +714,18 @@ h1 {
 }
 
 .preset-btn:hover {
-  border-color: var(--ink);
+  border-color: var(--cheese);
 }
 
 .preset-btn.active {
   background: var(--cheese);
-  border-color: var(--ink);
+  color: #141416;
+  border-color: var(--cheese);
 }
 
 /* Facts Strip */
 .facts-strip {
-  background: var(--ink);
+  background: var(--asphalt);
   color: #fff;
   padding: 28px 0;
   border-top: 4px solid var(--stop-red);
@@ -810,8 +816,8 @@ h1 {
 }
 
 .era-card-featured {
-  border: 2px solid var(--ink);
-  box-shadow: 6px 6px 0 var(--cheese);
+  border: 2px solid var(--cheese);
+  box-shadow: 6px 6px 0 var(--stop-red);
 }
 
 .era-badge {
@@ -821,8 +827,8 @@ h1 {
   font-weight: 700;
   padding: 4px 8px;
   border-radius: 6px;
-  background: var(--surface-tint);
-  color: var(--ink);
+  background: var(--surface-2);
+  color: var(--cheese);
 }
 
 .era-card h3 {
@@ -834,7 +840,7 @@ h1 {
 .era-caption {
   font-family: "Space Mono", monospace;
   font-size: 0.78rem;
-  color: var(--stop-red);
+  color: var(--stop-red-bright);
   margin: 0;
 }
 
@@ -853,7 +859,7 @@ h1 {
   font-family: inherit;
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--stop-red);
+  color: var(--cheese);
   cursor: pointer;
   text-align: left;
 }
@@ -877,7 +883,7 @@ h1 {
   align-items: center;
   gap: 14px;
   background: var(--surface);
-  border: 2px solid var(--ink);
+  border: 2px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 14px 20px;
   box-shadow: 5px 5px 0 var(--stop-red);
@@ -939,7 +945,7 @@ h1 {
 }
 
 .review-stars.stars-low {
-  color: var(--stop-red);
+  color: var(--stop-red-bright);
 }
 
 .review-card blockquote {
@@ -958,7 +964,7 @@ h1 {
 /* Field Report Form */
 .field-report-box {
   background: var(--surface);
-  border: 2px solid var(--ink);
+  border: 2px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 24px;
 }
@@ -1011,16 +1017,17 @@ h1 {
   width: 100%;
   padding: 10px 12px;
   border-radius: 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   font-family: inherit;
   font-size: 0.92rem;
+  color: var(--ink);
   background: var(--bg);
 }
 
 .field-form input:focus,
 .field-form select:focus {
   outline: 2px solid var(--cheese);
-  border-color: var(--ink);
+  border-color: var(--cheese);
 }
 
 /* Visit Section */
@@ -1090,18 +1097,19 @@ h1 {
   font-size: 0.7rem;
   padding: 3px 8px;
   border-radius: 6px;
-  border: 1px solid var(--border);
-  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  background: var(--surface-2);
+  color: var(--ink);
   cursor: pointer;
 }
 
 .copy-btn:hover {
-  border-color: var(--ink);
+  border-color: var(--cheese);
 }
 
 .etiquette-card {
-  background: var(--cheese-pale);
-  border: 1px solid var(--cheese-deep);
+  background: var(--cheese-tint);
+  border: 1px solid rgba(247, 190, 45, 0.35);
   border-radius: var(--radius);
   padding: 18px 20px;
   margin-bottom: 22px;
@@ -1112,6 +1120,7 @@ h1 {
   font-size: 1.3rem;
   margin: 0 0 10px;
   text-transform: uppercase;
+  color: var(--cheese);
 }
 
 .etiquette-card ul {
@@ -1124,7 +1133,7 @@ h1 {
 
 .map-frame-card {
   background: var(--surface);
-  border: 2px solid var(--ink);
+  border: 2px solid var(--border-strong);
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 8px 8px 0 var(--cheese);
